@@ -1,24 +1,4 @@
 ]
-
--- Insert dummy data into staging tables
-INSERT INTO dbo.Stg_Customers VALUES (1, 'Alice', 'Smith', 'alice@example.com', '2023-01-15', 1);
-INSERT INTO dbo.Stg_Customers VALUES (2, 'Bob', 'Brown', 'bob@example.com', '2023-02-20', 1);
-INSERT INTO dbo.Stg_Customers VALUES (3, 'Carol', 'Davis', 'carol@example.com', '2023-03-10', 0);
-INSERT INTO dbo.Stg_Customers VALUES (4, 'Dan', 'Miller', 'dan@example.com', '2023-04-05', 1);
-INSERT INTO dbo.Stg_Customers VALUES (5, 'Eve', 'Wilson', 'eve@example.com', '2023-05-12', 1);
-
-INSERT INTO dbo.Stg_Products VALUES (100, 'Widget', 'Gadgets', 25.00, 0);
-INSERT INTO dbo.Stg_Products VALUES (101, 'Gizmo', 'Gadgets', 15.00, 0);
-INSERT INTO dbo.Stg_Products VALUES (102, 'Thingamajig', 'Widgets', 35.00, 1);
-INSERT INTO dbo.Stg_Products VALUES (103, 'Doodad', 'Gizmos', 45.00, 0);
-INSERT INTO dbo.Stg_Products VALUES (104, 'Contraption', 'Widgets', 55.00, 0);
-
-DECLARE @i INT = 1;
-WHILE @i <= 200
-BEGIN
-    INSERT INTO dbo.Stg_Sales
-    SELECT
-        @i,
         DATEADD(DAY, -@i, GETDATE()),
         (1 + (@i % 5)),
         (100 + (@i % 5)),
