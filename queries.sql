@@ -1,15 +1,4 @@
 
-]
-);
-
-CREATE TABLE dbo.Stg_Customers (
-    CustomerID INT PRIMARY KEY,
-    FirstName NVARCHAR(50),
-    LastName NVARCHAR(50),
-    Email NVARCHAR(100),
-    SignupDate DATE,
-    IsActive BIT
-);
 
 CREATE TABLE dbo.Stg_Products (
     ProductID INT PRIMARY KEY,
