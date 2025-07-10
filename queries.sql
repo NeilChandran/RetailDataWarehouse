@@ -1,13 +1,3 @@
-USE tempdb;
-GO
-
--- Drop tables if they exist
-IF OBJECT_ID('dbo.Stg_Sales', 'U') IS NOT NULL DROP TABLE dbo.Stg_Sales;
-IF OBJECT_ID('dbo.Stg_Customers', 'U') IS NOT NULL DROP TABLE dbo.Stg_Customers;
-IF OBJECT_ID('dbo.Stg_Products', 'U') IS NOT NULL DROP TABLE dbo.Stg_Products;
-IF OBJECT_ID('dbo.Fact_Sales', 'U') IS NOT NULL DROP TABLE dbo.Fact_Sales;
-IF OBJECT_ID('dbo.Dim_Customer', 'U') IS NOT NULL DROP TABLE dbo.Dim_Customer;
-IF OBJECT_ID('dbo.Dim_Product', 'U') IS NOT NULL DROP TABLE dbo.Dim_Product;
 
 -- Create staging tables
 CREATE TABLE dbo.Stg_Sales (
