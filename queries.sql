@@ -1,13 +1,5 @@
 
--- Create staging tables
-CREATE TABLE dbo.Stg_Sales (
-    SaleID INT PRIMARY KEY,
-    SaleDate DATE,
-    CustomerID INT,
-    ProductID INT,
-    Quantity INT,
-    Amount DECIMAL(10,2),
-    Region NVARCHAR(50)
+]
 );
 
 CREATE TABLE dbo.Stg_Customers (
