@@ -1,12 +1,4 @@
-
-
-CREATE TABLE dbo.Stg_Products (
-    ProductID INT PRIMARY KEY,
-    ProductName NVARCHAR(100),
-    Category NVARCHAR(50),
-    Price DECIMAL(10,2),
-    Discontinued BIT
-);
+]
 
 -- Insert dummy data into staging tables
 INSERT INTO dbo.Stg_Customers VALUES (1, 'Alice', 'Smith', 'alice@example.com', '2023-01-15', 1);
